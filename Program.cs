@@ -1,0 +1,37 @@
+﻿using System;
+using System.Linq;
+using System.Collections.Generic;
+
+namespace Helloworld
+{
+    public static class Program
+    {
+        public static void Main()
+        {
+            Console.Write("enter first number");
+            int n1 = int.Parse(Console.ReadLine());
+            Console.Write("enter last number");
+            int n2 = int.Parse(Console.ReadLine());
+            int i, j, sum;
+            Console.WriteLine("perfect numbers from " + n1 + " to " + n2 + ":");
+            for (i = n1; i <= n2; i++)
+            {
+                j = 1;
+                sum = 0;
+                while (j < i)
+                {
+                    if (i % j == 0)
+                        sum = sum + j;
+                    j++;
+
+                }
+                if (sum == i)
+                    Console.WriteLine(i);
+            }
+
+
+
+
+        }
+    }
+}
